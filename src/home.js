@@ -1,9 +1,6 @@
 import Restaurant from "./images/restaurant.jpg";
 
-function appendHomeContent() {
-
-	const content = document.querySelector("#content");
-
+function appendHomeContent(content) {
 	const header = document.createElement("h1");
 	header.textContent = "Restreasdefreraunt";
 	content.appendChild(header);
@@ -24,6 +21,5 @@ function appendHomeContent() {
 	const p3 = document.createElement("p");
 	p3.textContent = "Whether you're looking for a quick lunch or a leisurely dinner, Restaurant X offers impeccable service and delicious food that will leave you satisfied and coming back for more. Don't miss out on the chance to dine at this amazing restaurant and experience their truly exceptional cuisine for yourself.";
 	content.appendChild(p3);
-
 }
 export { appendHomeContent };
