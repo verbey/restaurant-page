@@ -14,23 +14,17 @@ const contact = document.createElement("div");
 const menu = document.createElement("div");
 
 home.addEventListener("click", () => {
-	while (tabCont.firstChild) {
-		tabCont.firstChild.remove();
-	}
+	clearTabCont(tabCont);
 	appendHomeContent(tabCont);
 });
 
 contact.addEventListener("click", () => {
-	while (tabCont.firstChild) {
-		tabCont.firstChild.remove();
-	}
+	clearTabCont(tabCont);
 	appendContactContent(tabCont);
 });
 
 menu.addEventListener("click", () => {
-	while (tabCont.firstChild) {
-		tabCont.firstChild.remove();
-	}
+	clearTabCont(tabCont);
 	appendMenuContent(tabCont);
 });
 
@@ -42,3 +36,9 @@ content.appendChild(nav);
 const tabCont = document.createElement("div");
 tabCont.classList.add("tabCont");
 content.appendChild(tabCont);
+
+function clearTabCont(tabCont) {
+	while (tabCont.firstChild) {
+		tabCont.firstChild.remove();
+	}
+}
