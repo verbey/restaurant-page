@@ -10,8 +10,11 @@ content.appendChild(header);
 
 const nav = document.createElement("nav");
 const home = document.createElement("div");
+home.textContent = "Home";
 const contact = document.createElement("div");
+contact.textContent = "Contact";
 const menu = document.createElement("div");
+menu.textContent = "Menu";
 
 home.addEventListener("click", () => {
 	clearTabCont(tabCont);
