@@ -16,6 +16,12 @@ contact.textContent = "Contact";
 const menu = document.createElement("div");
 menu.textContent = "Menu";
 
+function clearTabCont(tabCont) {
+	while (tabCont.firstChild) {
+		tabCont.firstChild.remove();
+	}
+}
+
 home.addEventListener("click", () => {
 	clearTabCont(tabCont);
 	appendHomeContent(tabCont);
@@ -40,8 +46,5 @@ const tabCont = document.createElement("div");
 tabCont.classList.add("tabCont");
 content.appendChild(tabCont);
 
-function clearTabCont(tabCont) {
-	while (tabCont.firstChild) {
-		tabCont.firstChild.remove();
-	}
-}
+clearTabCont(tabCont);
+appendHomeContent(tabCont);
